@@ -9,15 +9,16 @@ class TokenAuthentication(TA):
 	"""
 
 	def authenticate(self, request):
-		key = request.META.get('HTTP_AUTHORIZATION')
+		auth = request.META.get('HTTP_AUTHORIZATION')
+		key = auth.split(" ")
 		skip_urls = ['/api/login/']
 
 		if request.path in skip_urls:
 			return (AnonymousUser, None)
 
-		token = Token.objects.select_related('user').filter(key=key)
+		token = Token.objects.select_related('user').filter(key=key[1])
 
 		if not token:
 			raise ValidationError("Invalid Token")
 
-		return token.user, token
+		return token[0].user, token

@@ -22,14 +22,13 @@ const Login = () => {
 	const submit = async (e: SyntheticEvent) => {
 		e.preventDefault();
 
-		await axios.post('token/create/', data).then(res => {
-			localStorage.setItem('refresh', res.data.refresh);
-			localStorage.setItem('access', res.data.access);
+		await axios.post('login/', data).then(res => {
+			console.log(res.data)
+			localStorage.setItem('token', res.data.token);
 			localStorage.setItem('isAuthenticated', true)
-			navigate("/users");
+			navigate("/search");
 		}).catch(error => {
-			localStorage.removeItem('refresh');
-			localStorage.removeItem('access');
+			localStorage.removeItem('token');
 			localStorage.removeItem('isAuthenticated');
 		})
 	}

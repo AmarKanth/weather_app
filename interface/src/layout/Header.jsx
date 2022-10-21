@@ -8,8 +8,7 @@ const Header = () => {
     const handle = async (e: SyntheticEvent) => {
         e.preventDefault();
         await axios.get('logout/').then(res => {
-            localStorage.removeItem('refresh');
-            localStorage.removeItem('access');
+            localStorage.removeItem('token');
             localStorage.removeItem('isAuthenticated');
         });
         navigate("/login");
