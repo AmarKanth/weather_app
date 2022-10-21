@@ -1,0 +1,79 @@
+body {
+  font-size: .875rem;
+}
+
+/*
+ * HEADER
+ */
+
+header .navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: fantasy;
+}
+
+header .nav-link {
+    display: inline-block;
+}
+
+header .nav-item a{
+    margin-right: 1px;
+}
+
+
+.container-fluid {
+    display: flex;
+    padding: 0px;
+}
+
+/*
+ * Side Bar
+ */
+.sidebar {
+    flex: 15%;
+    min-height: 100vh !important;
+    color: #fff !important;
+    padding: 1rem !important;
+    background-color: #343a40 !important;
+}
+
+.sidebar .nav {
+    display: flex;
+    flex-direction: column !important;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.sidebar .nav a {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/*
+ * Content
+ */
+.main-content {
+    flex: 85%;
+    color: #343a40 !important;
+    padding: 1rem !important;
+    background-color: #fff !important;
+}
+
+.add-button {
+    padding: 10px;
+}
+
+.horizontal-form div {
+    float: left;
+}
+
+.form-label {
+    width: 100%;
+    font-weight: 600;
+}
+
+.form-check {
+    padding: 0 1.25rem;
+}
