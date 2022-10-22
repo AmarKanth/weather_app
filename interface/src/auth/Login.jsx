@@ -23,7 +23,6 @@ const Login = () => {
 		e.preventDefault();
 
 		await axios.post('login/', data).then(res => {
-			console.log(res.data)
 			localStorage.setItem('token', res.data.token);
 			localStorage.setItem('isAuthenticated', true)
 			navigate("/search");

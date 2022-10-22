@@ -29,29 +29,6 @@ header .nav-item a{
 }
 
 /*
- * Side Bar
- */
-.sidebar {
-    flex: 15%;
-    min-height: 100vh !important;
-    color: #fff !important;
-    padding: 1rem !important;
-    background-color: #343a40 !important;
-}
-
-.sidebar .nav {
-    display: flex;
-    flex-direction: column !important;
-    flex-wrap: wrap;
-    list-style: none;
-}
-
-.sidebar .nav a {
-    font-size: 15px;
-    font-weight: 500;
-}
-
-/*
  * Content
  */
 .main-content {
